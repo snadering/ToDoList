@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;600&family=Syncopate&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    list-style: none;
+    text-decoration: none;
+}
+
+
+:root {
+    --main-color:  #189AB4;
+    --background-color: #D4F1F4;
+    --border-color: #05445E; 
+    /*extra: #75E6DA*/
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.container {
+    width: 680px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.container .task-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.task-form .task-input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border: 2px solid var(--border-color);
+    border-radius: 10px 0 0 10px;
+    background: var(--background-color);
+}
+
+.task-form .task-input::placeholder {
+    color: var(--border-color);
+}
+
+.task-form .task-add {
+    padding: 1rem;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid var(--border-color);
+    border-left: none;
+    background: var(--main-color);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--background-color);
+}
+
+.container .task-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.task-list .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--background-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.item .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.task i {
+    color: var(--main-color);
+}
+
+.task-name {
+    font-weight: 600;
+}
+
+.item i {
+    cursor: pointer;
+}
+
