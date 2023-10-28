@@ -7,6 +7,7 @@ const taskRemoveAll = document.querySelector(".task-remove-all");
 
 //add event to add button
 taskAdd.addEventListener("click", (e) => {
+
     if(taskInput.value.length > 0){
 
         //prevent submit the form
