@@ -2,6 +2,7 @@
 const taskInput = document.querySelector(".task-input");
 const taskAdd = document.querySelector(".task-add");
 const taskList = document.querySelector(".task-list");
+const taskRemoveAll = document.querySelector(".task-remove-all");
 
 
 //add event to add button
@@ -39,7 +40,7 @@ taskAdd.addEventListener("click", (e) => {
         });
 
         //add event to check button
-        checkButton.addEventListener("click", (e) => {
+        checkButton.addEventListener("click", () => {
 
             //Check if an element contains a class
             if(checkButton.classList.contains("fa-circle")){
@@ -54,6 +55,17 @@ taskAdd.addEventListener("click", (e) => {
                 item.style.background = "#D4F1F4";
             }
         });
+
+
+        taskRemoveAll.addEventListener("click", () => {
+               removeAllTasks();
+        });
+
+        function removeAllTasks(){
+            while(taskList.firstChild){
+                taskList.removeChild(taskList.firstChild);
+            }
+        }
 
         //clear input after add
         taskInput.value = "";
